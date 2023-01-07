@@ -21,6 +21,8 @@ import {
 
 import styled from 'styled-components/native';
 
+import { NavigationContainer } from '@react-navigation/native';
+
 const ScrollView = styled.ScrollView`
   background-color: ${Colors.lighter};
 `;
@@ -47,40 +49,42 @@ const HighLight = styled.Text`
 
 const App = () => {
   return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <Header />
-          <Body>
-            <SectionContainer>
-              <SectionDescription>Step One</SectionDescription>
-              <SectionDescription>
-                Edit <HighLight>App.js</HighLight> to change this screen and then come back to see
-                your edits.
-              </SectionDescription>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionDescription>See Your Changes</SectionDescription>
-              <SectionDescription>
-                <ReloadInstructions />
-              </SectionDescription>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionDescription>Debug</SectionDescription>
-              <SectionDescription>
-                <DebugInstructions />
-              </SectionDescription>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionDescription>Learn More</SectionDescription>
-              <SectionDescription>Read the docs to discover what to do next:</SectionDescription>
-            </SectionContainer>
-            <LearnMoreLinks />
-          </Body>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
+    <NavigationContainer>
+      <Fragment>
+        <StatusBar barStyle="dark-content" />
+        <SafeAreaView>
+          <ScrollView contentInsetAdjustmentBehavior="automatic">
+            <Header />
+            <Body>
+              <SectionContainer>
+                <SectionDescription>Step One</SectionDescription>
+                <SectionDescription>
+                  Edit <HighLight>App.js</HighLight> to change this screen and then come back to see
+                  your edits.
+                </SectionDescription>
+              </SectionContainer>
+              <SectionContainer>
+                <SectionDescription>See Your Changes</SectionDescription>
+                <SectionDescription>
+                  <ReloadInstructions />
+                </SectionDescription>
+              </SectionContainer>
+              <SectionContainer>
+                <SectionDescription>Debug</SectionDescription>
+                <SectionDescription>
+                  <DebugInstructions />
+                </SectionDescription>
+              </SectionContainer>
+              <SectionContainer>
+                <SectionDescription>Learn More</SectionDescription>
+                <SectionDescription>Read the docs to discover what to do next:</SectionDescription>
+              </SectionContainer>
+              <LearnMoreLinks />
+            </Body>
+          </ScrollView>
+        </SafeAreaView>
+      </Fragment>
+    </NavigationContainer>
   );
 };
 
